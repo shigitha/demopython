@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+
+
+  <!-- Content here -->
+
+    <form action="{% url 'newmovieapp:add_movie' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+        <div class="col  new1" >
+        <label>Movie Name</label></div>
+        <div class="col">
+            <input type="text" name="name" placeholder="Movie Name"></div><br><br>
+        <div class="col"><label>Movie Description</label></div>
+        <div class="col"><textarea name="des"></textarea></div><br><br>
+        <div class="col"><label>Year</label>&nbsp;&nbsp;</div>
+        <div class="col"><input type="number" name="year"><br><br></div>
+        <div class="col"><label>Image</label></div>
+        <div class="col"><input type="file" name="img"></div><br><br>
+        <div><input type="submit"></div>
+
+    </form>
+    </div>
+</div>
+{% endblock %}
