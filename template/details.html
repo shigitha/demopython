@@ -1,14 +1,16 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html'%}
 {% block body %}
-<div class="cointainer">
-
-        <img src="{{movie.img.url}}" width="100" height="100"><br>
-        {{movie.name}}<br>
-        {{movie.des}}<br>
-        {{movie.year}}<br><br><br>
-        <a class="btn btn-warning" href="{% url 'newmovieapp:update_movie' movie.id %}">update</a><br>
+    <div class="container">
+        <div>
+            <img src="{{movie.img.url}}" style="width:100px; height:150px;"><br>
+              <h5>{{movie.name}}</h5><br>
+              <h6 class="text-justify">{{movie.des}}</h6>
+              <h5>{{movie.year}}</h5>
+            <br>
+            <div>
+            <a class="btn btn-warning" href="{% url 'newmovieapp:update_movie' movie.id %}">update</a><br>
         <a class="btn btn-danger" href="{% url 'newmovieapp:delete' movie.id %}">delete</a>
-</div>
-
+      </div>
+    </div>
+    </div>
 {% endblock %}

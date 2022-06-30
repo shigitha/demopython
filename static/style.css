@@ -1,10 +1,18 @@
 body{
-background-color:#ffc107;
+background-color:#ffc107 !important;
 }
 .new1{
 padding-top: 30px;
 }
 .add1{
-float:right;
+float:left;
 
+}
+.my_bottom{
+margin-bottom:20px;
+}
+.card-img-top{
+width:100%;
+height: 25vw;
+object-fit: cover;
 }
